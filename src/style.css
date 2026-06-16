@@ -1,0 +1,115 @@
+/* @import url(https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap); */
+@import "tailwindcss";
+
+html {
+  font-size: 62.5%;
+}
+@theme {
+  --color-head-text: #333333;
+  --color-purple: #4647ae;
+  --color-nav-bg-color: #e6e6e6;
+  --color-button: #373737;
+  --color-p-tag: #666666;
+  --color-nav-color: #ffffff80;
+  --color-date-color: #999999;
+  --color-hover-color: #3639da;
+  --color-footer-p-color: #bbbbbb;
+  --color-footer-color: #150e06;
+  --font-raleway: "Raleway", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+}
+@layer base {
+  button {
+    padding: 1.2rem 4.2rem;
+    border-radius: 0.8rem;
+    font-size: 1.4rem;
+    background-color: var(--color-purple);
+    color: white;
+    font-family: var(--font-raleway);
+  }
+  button:hover {
+    cursor: pointer;
+  }
+  h1,
+  h2,
+  h3 {
+    font-weight: bold;
+  }
+  h2 {
+    color: var(--color-head-text);
+  }
+
+  h3 {
+    color: var(--color-head-text);
+    margin-bottom: 1.2rem;
+  }
+
+  .custom-p-font-size {
+    font-size: 1.6rem;
+    margin-bottom: 1.9rem;
+    color: var(--color-p-tag);
+    font-family: var(--font-roboto);
+  }
+  .custom-head-text-size {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+    font-family: var(--font-roboto);
+  }
+  .custom-img-margin {
+    margin-bottom: 2.4rem;
+  }
+  .custom-read-more-style {
+    color: var(--color-purple);
+    font-size: 1.4rem;
+    font-family: var(--font-roboto);
+  }
+  .page--active {
+    display: block;
+    transition: all 0.3s;
+  }
+  .page--inactive {
+    display: none;
+  }
+}
+@utility custom-container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding-inline: 6rem;
+}
+@utility custom-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 49%);
+  justify-content: space-between;
+}
+@utility grid-3-column {
+  display: grid;
+  /* grid-template-columns: (repeat: autofill, minmax(22rem, 1fr)); */
+  grid-template-columns: repeat(auto-fill, minmax(32%, 1fr));
+  /* grid-template-columns: repeat(3, 30%); */
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+@utility custom-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@utility custom-img-style {
+  width: 100%;
+  aspect-ratio: 4 / 2;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+@utility custom-img-desc-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+@utility custom-img-desc-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
