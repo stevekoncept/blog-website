@@ -6,7 +6,8 @@ html {
 }
 @theme {
   --color-head-text: #333333;
-  --color-purple: #4647ae;
+  --color-purple-hover: #4647ae;
+  --color-purple: #38398b;
   --color-nav-bg-color: #e6e6e6;
   --color-button: #373737;
   --color-p-tag: #666666;
@@ -19,6 +20,9 @@ html {
   --font-roboto: "Roboto", sans-serif;
 }
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   button {
     padding: 1.2rem 4.2rem;
     border-radius: 0.8rem;
@@ -26,9 +30,11 @@ html {
     background-color: var(--color-purple);
     color: white;
     font-family: var(--font-raleway);
+    transition: all 0.3s;
   }
   button:hover {
     cursor: pointer;
+    background-color: var(--color-purple-hover);
   }
   h1,
   h2,
@@ -70,12 +76,21 @@ html {
   .page--inactive {
     display: none;
   }
-}
-@utility custom-container {
-  max-width: 1440px;
-  width: 100%;
-  margin: 0 auto;
-  padding-inline: 6rem;
+  /* .animate{
+
+  } */
+  .section--hidden {
+    opacity: 0;
+  }
+  .sticky {
+    position: fixed;
+  }
+  .custom-container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
 }
 @utility custom-grid {
   display: grid;
