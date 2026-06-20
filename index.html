@@ -13,12 +13,12 @@
     <title>TechTalks | Tech blog website</title>
   </head>
   <body
-    class="bg-white [&_button]:font-semibold [&_h3]:text-[2rem] [&_h3]:font-raleway "
+    class="bg-white [&_button]:font-semibold [&_h3]:text-[2rem] [&_h3]:font-raleway"
   >
     <!--  -->
-    <section class="nav-section header ">
+    <section class="nav-section header">
       <nav
-        class="nav custom-container flex items-center py-[2rem] bg-nav-bg-color border-b-[0.1rem] border-solid border-p-tag"
+        class="nav custom-container flex items-center py-[2rem] tablet:bg-nav-bg-color border-b-[0.1rem] border-solid border-p-tag"
       >
         <h1
           class="text-[3.2rem] text-head-text me-auto font-raleway font-extrabold"
@@ -26,7 +26,7 @@
           TechTalks
         </h1>
         <ul
-          class="flex items-center gap-[2rem] text-[1.6rem] text-head-text font-semibold mr-[2rem] font-roboto"
+          class="hidden tablet:flex items-center gap-[2rem] text-[1.6rem] text-head-text font-semibold mr-[2rem] font-roboto"
         >
           <li><a href="#" class="home-btn">Home</a></li>
           <li><a href="#recent-post">Recent Posts</a></li>
@@ -43,16 +43,17 @@
     <!--  -->
     <section class="main-page">
       <main
-        class="custom-container md:custom-grid bg-purple py-[9rem] text-white"
+        class="custom-container grid gap-[2rem] bg-purple text-white py-[9rem] tablet:grid-cols-[100%] laptop:grid-cols-[repeat(2,49%)] justify-between"
       >
         <div>
-          <p class="text-[1.4rem] mb-[1.2rem] font-semibold font-raleway">
+          <p class="text-[1.4rem] mb-[1rem] font-semibold font-raleway">
             Featured post
           </p>
           <h1
-            class="text-[8rem] leading-30 mb-[2.8rem] font-roboto font-extrabold"
+            class="text-[3.2rem] mb-[1.2rem] font-roboto font-extrabold tablet:text-[5rem] laptop:text-[8rem] leading-30"
           >
-            <span> The Future </span><span class="block">of Technology</span>
+            <span> The Future </span
+            ><span class="tablet:inline laptop:block">of Technology</span>
           </h1>
           <p class="mb-[2.8rem] text-[1.6rem] w-[95%] font-raleway">
             Discover insights on artificial Intelligence, blockchain, cloud
@@ -81,9 +82,12 @@
           </h2>
           <button>View all</button>
         </header>
-        <div class="grid-3-column">
+        <!--  -->
+        <div
+          class="tablet: grid grid-cols-[100%] laptop:grid-cols-[repeat(auto-fill,minmax(32%,1fr))] justify-between gap-[1.5rem]"
+        >
           <div
-            class="col-span-full grid grid-cols-[55%_1fr] gap-[5rem] mb-[5rem]"
+            class="tablet:grid grid-cols-[100%] laptop:col-span-full grid-cols-[repeat(2,49%)] gap-[5rem] mb-[5rem]"
           >
             <img
               src="images/blockchain.png"
@@ -97,7 +101,9 @@
                 <span>BLOCKCHAIN</span>
                 <span class="text-date-color">23 March 2026</span>
               </p>
-              <h2 class="text-[3.2rem] mb-[1.3rem] leading-15 font-roboto">
+              <h2
+                class="laptop:mb-[1.3rem] font-roboto text-[3.2rem] leading-15"
+              >
                 Understanding blockchain technology
               </h2>
               <p class="custom-p-font-size custom-img-desc-4 mb-[6rem]">
@@ -202,7 +208,9 @@
           </h2>
           <button>View all</button>
         </header>
-        <div class="grid-3-column">
+        <div
+          class="grid tablet:grid-cols-[100%] laptop:grid-cols-[repeat(auto-fill,minmax(32%,1fr))] justify-between gap-[1.5rem]"
+        >
           <div>
             <img
               src="images/ai image.png"
@@ -466,7 +474,7 @@
     <!--  -->
     <footer class="custom-container p-0">
       <div
-        class="bg-purple grid justify-center text-center py-[10rem] text-white"
+        class="bg-purple grid justify-center text-center py-[10rem] text-white px-[2rem]"
       >
         <h1
           class="font-raleway grid text-center text-[4.8rem] leading-20 mb-[4rem]"
@@ -475,7 +483,7 @@
           <span class="block">us to your inbox weekly.</span>
         </h1>
         <form
-          class="mb-[2.4rem] flex gap-[0.8rem] justify-self-center justify-between w-[80%] font-raleway"
+          class="mb-[2.4rem] flex gap-[0.8rem] justify-self-center justify-between font-raleway w-full"
         >
           <input
             type="email"
