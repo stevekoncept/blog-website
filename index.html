@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,10 +25,10 @@
     <!--  -->
     <section class="nav-section header">
       <nav
-        class="nav custom-container flex items-center py-[2rem] tablet:bg-nav-bg-color border-b-[0.1rem] border-solid border-p-tag"
+        class="nav custom-container flex items-center py-[2rem] bg-purple tablet:bg-nav-bg-color border-b-[0.1rem] border-solid border-p-tag"
       >
         <h1
-          class="text-[3.2rem] text-head-text me-auto font-raleway font-extrabold"
+          class="text-[3.2rem] text-white me-auto font-raleway font-extrabold tablet:text-head-text"
         >
           TechTalks
         </h1>
@@ -35,7 +42,18 @@
           </li>
         </ul>
 
-        <button class="text-white text-[1.6rem]">Contact Us</button>
+        <button class="hidden tablet:block text-white text-[1.6rem]">
+          Contact Us
+        </button>
+        <div
+          id="open-menu"
+          class="text-[3.2rem] text-white block tablet:hidden"
+        >
+          <i class="fas fa-bars menu-bar"></i>
+        </div>
+        <div id="close-menu" class="text-[3.2rem] text-white hidden">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
       </nav>
     </section>
 
@@ -43,14 +61,14 @@
     <!--  -->
     <section class="main-page">
       <main
-        class="custom-container grid gap-[2rem] bg-purple text-white py-[9rem] tablet:grid-cols-[100%] laptop:grid-cols-[repeat(2,49%)] justify-between"
+        class="custom-container grid gap-[2rem] bg-purple text-white tablet:grid-cols-[100%] laptop:grid-cols-[repeat(2,49%)] justify-between"
       >
         <div>
           <p class="text-[1.4rem] mb-[1rem] font-semibold font-raleway">
             Featured post
           </p>
           <h1
-            class="text-[3.2rem] mb-[1.2rem] font-roboto font-extrabold tablet:text-[5rem] laptop:text-[8rem] leading-30"
+            class="text-[3rem] mb-[1.2rem] font-roboto font-extrabold tablet:text-[5rem] laptop:text-[8rem] leading-30"
           >
             <span> The Future </span
             ><span class="tablet:inline laptop:block">of Technology</span>
@@ -72,14 +90,9 @@
         />
       </main>
       <!--  -->
-      <section
-        id="recent-post"
-        class="recent-post--sec custom-container py-[8rem]"
-      >
+      <section id="recent-post" class="recent-post--sec custom-container">
         <header class="custom-flex mb-[6rem]">
-          <h2 class="text-head-text text-[3.2rem] font-roboto">
-            Our Recent Posts
-          </h2>
+          <h2 class="text-head-text text-[3.2rem] font-roboto">Recent Posts</h2>
           <button>View all</button>
         </header>
         <!--  -->
@@ -87,7 +100,7 @@
           class="tablet: grid grid-cols-[100%] laptop:grid-cols-[repeat(auto-fill,minmax(32%,1fr))] justify-between gap-[1.5rem]"
         >
           <div
-            class="tablet:grid grid-cols-[100%] laptop:col-span-full grid-cols-[repeat(2,49%)] gap-[5rem] mb-[5rem]"
+            class="grid tablet:grid-cols-[100%] col-span-full laptop:grid-cols-[repeat(2,49%)] gap-[5rem] mb-[5rem]"
           >
             <img
               src="images/blockchain.png"
@@ -102,7 +115,7 @@
                 <span class="text-date-color">23 March 2026</span>
               </p>
               <h2
-                class="laptop:mb-[1.3rem] font-roboto text-[3.2rem] leading-15"
+                class="text-[1.2rem] laptop:mb-[1.3rem] font-roboto text-[3.2rem] leading-15"
               >
                 Understanding blockchain technology
               </h2>
@@ -477,13 +490,13 @@
         class="bg-purple grid justify-center text-center py-[10rem] text-white px-[2rem]"
       >
         <h1
-          class="font-raleway grid text-center text-[4.8rem] leading-20 mb-[4rem]"
+          class="font-raleway grid text-center mb-[4rem] text-[3.2rem] tablet:text-[4.8rem] leading-20"
         >
           <span> Get our stories delivered from</span>
-          <span class="block">us to your inbox weekly.</span>
+          <span class="inline tablet:block">us to your inbox weekly.</span>
         </h1>
         <form
-          class="mb-[2.4rem] flex gap-[0.8rem] justify-self-center justify-between font-raleway w-full"
+          class="flex gap-[0.8rem] mb-[2.4rem] justify-self-center justify-between font-raleway w-full"
         >
           <input
             type="email"
@@ -500,7 +513,7 @@
             Get a response tomorrow if you submit before 7pm today. If we
             received after
           </span>
-          <span class="block">
+          <span class="inline tablet:block">
             7pm, you will get a reponse the following day.</span
           >
         </p>

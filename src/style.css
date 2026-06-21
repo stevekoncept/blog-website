@@ -56,7 +56,7 @@ html {
 @layer components {
   .custom-container {
     max-width: 1440px;
-    @apply w-full mx-auto px-[2rem] tablet:px-[4rem] laptop:px-[8rem];
+    @apply w-full mx-auto px-[2rem] py-[4rem] tablet:px-[4rem] laptop:px-[8rem] py-[8rem];
   }
   .tablet-padding {
     @apply px-[4rem];
@@ -90,7 +90,7 @@ html {
     position: fixed;
   }
   .custom-flex {
-    @apply flex justify-between align-middle
+    @apply flex justify-between align-middle;
   }
   .custom-img-style {
     width: 100%;
