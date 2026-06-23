@@ -56,7 +56,8 @@ html {
 @layer components {
   .custom-container {
     max-width: 1440px;
-    @apply w-full mx-auto px-[2rem] py-[4rem] tablet:px-[4rem] laptop:px-[8rem] py-[8rem];
+    /* @apply w-full mx-auto p-[4rem 2rem] tablet:px-[4rem] laptop:px-[8rem] py-[8rem]; */
+    @apply w-full mx-auto px-[2rem] py-[4rem] tablet:px-[4rem] tablet:py-[8rem] laptop:px-[8rem] laptop:py-[8rem];
   }
   .tablet-padding {
     @apply px-[4rem];
@@ -109,5 +110,9 @@ html {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+  .no-scroll {
+    overflow: hidden;
+    height: 100vh;
   }
 }

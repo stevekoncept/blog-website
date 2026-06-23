@@ -22,8 +22,31 @@
   <body
     class="bg-white [&_button]:font-semibold [&_h3]:text-[2rem] [&_h3]:font-raleway"
   >
+    <section
+      id="resp-menu-bar"
+      class="h-screen w-full absolute top-0 left-0 backdrop-blur-2xl z-[3.9rem] transition-transform -translate-x-[500px] duration-700 ease"
+    >
+      <div
+        id="close-menu"
+        class="flex justify-end text-[3.2rem] text-white mr-[2rem] mt-[2rem]"
+      >
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="grid justify-center mt-[8rem]">
+        <ul class="text-white text-[3.2rem] font-bold">
+          <li class="">
+            <a href="#" class="home-btn hidden mb-[2rem] resp-home-btn">Home</a>
+          </li>
+          <li class="recent-post-btn mb-[2rem]">
+            <a href="#recent-post">Recent Posts</a>
+          </li>
+          <li class="more-blog--btn mb-[2rem]"><a href="#">More Blogs</a></li>
+          <li class="subscribe-btn"><a href="#suscribe">Subscribe</a></li>
+        </ul>
+      </div>
+    </section>
     <!--  -->
-    <section class="nav-section header">
+    <section id="home" class="nav-section header">
       <nav
         class="nav custom-container flex items-center py-[2rem] bg-purple tablet:bg-nav-bg-color border-b-[0.1rem] border-solid border-p-tag"
       >
@@ -51,9 +74,6 @@
         >
           <i class="fas fa-bars menu-bar"></i>
         </div>
-        <div id="close-menu" class="text-[3.2rem] text-white hidden">
-          <i class="fa-solid fa-xmark"></i>
-        </div>
       </nav>
     </section>
 
@@ -64,7 +84,9 @@
         class="custom-container grid gap-[2rem] bg-purple text-white tablet:grid-cols-[100%] laptop:grid-cols-[repeat(2,49%)] justify-between"
       >
         <div>
-          <p class="text-[1.4rem] mb-[1rem] font-semibold font-raleway">
+          <p
+            class="text-[1.4rem] mb-[1rem] font-semibold font-raleway"
+          >
             Featured post
           </p>
           <h1
@@ -92,7 +114,7 @@
       <!--  -->
       <section id="recent-post" class="recent-post--sec custom-container">
         <header class="custom-flex mb-[6rem]">
-          <h2 class="text-head-text text-[3.2rem] font-roboto">Recent Posts</h2>
+          <h2 class="text-head-text text-[2.4rem] tablet:text-[3.2rem] font-roboto">Recent Posts</h2>
           <button>View all</button>
         </header>
         <!--  -->
@@ -216,7 +238,7 @@
       <!--  -->
       <section class="custom-container py-[8rem] section--2">
         <header class="custom-flex mb-[6rem]">
-          <h2 class="text-head-text text-[3.2rem] font-roboto">
+          <h2 class="text-head-text text-[2.4rem] tablet:text-[3.2rem] font-roboto">
             Popular Posts
           </h2>
           <button>View all</button>
@@ -485,7 +507,7 @@
     </section>
     <!--  -->
     <!--  -->
-    <footer class="custom-container p-0">
+    <footer id="suscribe" class="custom-container p-0">
       <div
         class="bg-purple grid justify-center text-center py-[10rem] text-white px-[2rem]"
       >
@@ -523,6 +545,7 @@
         <ul
           class="flex align-middle justify-center gap-[2rem] mb-[2rem] text-[1.6rem]"
         >
+          <li><a href="#home">Home</a></li>
           <li><a href="#recent-post">Recent Posts</a></li>
           <li><a href="#">More Blog</a></li>
           <li><a href="#">Contact Us</a></li>
