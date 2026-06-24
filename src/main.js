@@ -71,24 +71,12 @@ const sections = document.querySelectorAll("section");
 //
 
 openMenu.addEventListener("click", () => {
-  // sideResponsiveBar.style.transform = "translateX(0)";
-  sideResponsiveBar.classList.add("translate-x-0");
   sideResponsiveBar.classList.remove("-translate-x-[500px]");
-  // sideResponsiveBar.classList.add("translate-x-0");
-  console.log("clicked");
   document.body.classList.toggle("no-scroll");
 });
-// window.addEventListener("resize", () => {
-//   if (window.innerWidth > 480) {
-//     openMenu.style.display = "none";
-//     closeMenu.style.display = "none";
-//   }
-// });
+
 
 closeMenu.addEventListener("click", () => {
-  // sideResponsiveBar.style.transform = " translateX(-500px)";
-  // sideResponsiveBar.classList.remove("-translate-x-[500px]");
-  sideResponsiveBar.classList.remove("translate-x-0");
   sideResponsiveBar.classList.add("-translate-x-[500px]");
   document.body.classList.remove("no-scroll");
 });
